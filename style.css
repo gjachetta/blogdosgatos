@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 62.5%;
+  
+    --base-color-blue-dark: #065E7C;
+    --base-color-blue-light: #387E96;
+    --base-color-white: #FFFFFF;
+    --base-color-gray-a20: rgba(255, 255, 255, 0.20);
+    --base-color-gray-light: #F4FCFF;
+  }
+  
+  html, body, input {
+    font-family: 'Mulish', sans-serif;
+  }
+  
+  footer, input, input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--base-color-white);
+  }
+  
+  .page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7.2rem 1fr 6.4rem;
+  }
+  
+  .page h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    line-height: 160%;
+  }
+  
+  .page h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 160%;
+  }
+  
+  .page header {
+    padding: 1.6rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    background-color: var(--base-color-blue-dark);
+  }
+  
+  #pata {
+    padding: 0.96rem 0.8rem;
+    background-color: var(--base-color-gray-light);
+    border-radius: 50%;
+  }
+
+  
+  
+
+  .avatar{
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    border-radius: 10rem;
+  }
+  
+  .page header form {
+    width: 100%;
+  }
+  
+  .page header form label {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  .page header form input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    background-color: var(--base-color-gray-a20);
+    border: none;
+    border-radius: 0.4rem;
+  }
+  
+  .page header form input::placeholder {
+    width: 100%;
+  }
+  
+  .page main {
+    max-width: 80rem;
+    margin-inline: auto;
+    overflow-y: auto;
+  }
+  
+  .page main img {
+    width: 100%;
+  }
+  
+  .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .conteudo-principal article {
+    padding-inline: 1.5rem;
+  }
+  
+  .conteudo-principal article p {
+    font-size: 1.6rem;
+    line-height: 160%;
+  }
+  
+  .cabecalho-artigo {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .buttons button {
+    width: 4rem;
+    height: 4rem;
+    padding: 1.2rem;
+    background-color: var(--base-color-blue-dark);
+    border: none;
+    border-radius: 50%;
+  }
+  
+  .buttons button + button {
+    margin-left: 1.2rem;
+  }
+  
+  .conteudo-principal aside {
+    padding: 0 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .conteudo-principal aside a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .conteudo-principal aside a figure {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .img-wrapper {
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+  }
+  
+  .img-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+  }
+  
+  .conteudo-principal aside a:hover figure img {
+    transform: rotate(10deg) scale(1.4);
+    filter: contrast(120%) saturate(120%);
+  }
+  
+  .conteudo-principal aside figure p {
+    font-size: 1.4rem;
+    line-height: 160%;
+  }
+  
+  .page footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-color-blue-light);
+  }
+  
+  @media (min-width: 1024px) {
+    .page main {
+      max-width: 100%;
+    }
+  
+    .conteudo-principal {
+      padding: 3rem 3rem 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: max-content;
+      gap: 3rem 3rem;
+    }
+  
+    .conteudo-principal img {
+      grid-row: 1/ 2;
+      grid-column: 1 / 2;
+    }
+  
+    .conteudo-principal article {
+      padding: 0;
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+  
+    .cabecalho-artigo {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .conteudo-principal aside {
+      padding: 0;
+      grid-row: 1 / 4;
+      grid-column: 2 / 3;
+    }
+  
+    .conteudo-principal aside h1 {
+      line-height: 70%;
+    }
+  }
